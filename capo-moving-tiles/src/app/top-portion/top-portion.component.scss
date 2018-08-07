@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: minmax(2, auto);
-  grid-auto-flow: column dense;
+  // grid-auto-flow: column dense;
   grid-gap: 2px;
   margin: 0;
   background: $secondary-color;

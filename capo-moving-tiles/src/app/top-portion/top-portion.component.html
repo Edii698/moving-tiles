@@ -1,5 +1,12 @@
 <section id="top">
-  <div class="box small"></div>
+  <div *ngFor="let photo of photos$">
+    <!-- <div class="small" style="background: url({{photo.urls.small}})"></div> -->
+    <div class="small">
+      <img src="{{photo.urls.small}}" alt="">
+    </div>
+  </div>
+
+  <!-- <div class="box small" style="background: url('https://m.media-amazon.com/images/M/MV5BZDNkYjQxNjgtMDU1Yy00YzhkLTg1OTktZTU5YjAzZTdkOGEwXkEyXkFqcGdeQXVyNzU1NzE3NTg@._V1_CR0,45,480,270_AL_UX477_CR0,0,477,268_AL_.jpg')"></div>
   <div class="box large"></div>
   <div class="box small"></div>
   <div class="box small"></div>
@@ -7,5 +14,5 @@
   <div class="box small"></div>
   <div class="box small"></div>
   <div class="box small"></div>
-  <div class="box small"></div>
+  <div class="box small"></div> -->
 </section>

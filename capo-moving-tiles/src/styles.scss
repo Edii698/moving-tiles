@@ -7,10 +7,15 @@ body {
   margin: 0;
   background: $primary-color;
   height: 100vh;
-  overflow: hidden;
+  //   overflow: hidden;
 }
 
 .container {
   max-width: 960px;
   margin: 5vh auto;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
