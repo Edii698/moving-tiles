@@ -1,11 +1,21 @@
 import { Component, OnInit } from "@angular/core";
 import { DataService } from "../data.service";
 import { Observable } from "rxjs";
+import {
+  trigger,
+  style,
+  transition,
+  animate,
+  keyframes,
+  query,
+  stagger
+} from "@angular/animations";
 
 @Component({
   selector: "app-top-portion",
   templateUrl: "./top-portion.component.html",
-  styleUrls: ["./top-portion.component.scss"]
+  styleUrls: ["./top-portion.component.scss"],
+  animations: []
 })
 export class TopPortionComponent implements OnInit {
   photos$: Object;
@@ -29,7 +39,7 @@ export class TopPortionComponent implements OnInit {
 
   getClass(id) {
     if (id == this.large) {
-      return "large";
+      return "large animated slideInRight";
     } else {
       return "small";
     }

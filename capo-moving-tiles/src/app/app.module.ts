@@ -6,10 +6,11 @@ import { TopPortionComponent } from "./top-portion/top-portion.component";
 import { BottomPortionComponent } from "./bottom-portion/bottom-portion.component";
 
 import { HttpClientModule } from "@angular/common/http";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [AppComponent, TopPortionComponent, BottomPortionComponent],
-  imports: [BrowserModule, HttpClientModule],
+  imports: [BrowserModule, HttpClientModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
