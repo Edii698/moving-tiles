@@ -1,11 +1,5 @@
 <section id="bottom">
-  <div class="box small"></div>
-  <div class="box small"></div>
-  <div class="box small"></div>
-  <div class="box small"></div>
-  <div class="box small"></div>
-  <div class="box small"></div>
-  <div class="box large"></div>
-  <div class="box small"></div>
-  <div class="box small"></div>
+  <div *ngFor="let photo of photos$; let i = index" [ngClass]="getClass(i)" id="{{[i]}}" (click)="onChangeClass(i)">
+    <img src="{{photo.urls.small}}" alt="random photo">
+  </div>
 </section>
