@@ -1,4 +1,5 @@
 <section id="bottom">
+  <!-- loop through json from api, set dynamic class and click event -->
   <div *ngFor="let photo of photos$; let i = index" [ngClass]="getClass(i)" id="{{[i]}}" (click)="onChangeClass(i)">
     <img src="{{photo.urls.small}}" alt="random photo">
   </div>

@@ -1,16 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { TopPortionComponent } from './top-portion.component';
+import { TopPortionComponent } from "./top-portion.component";
+import { DataService } from "../data.service";
 
-describe('TopPortionComponent', () => {
+describe("TopPortionComponent", () => {
   let component: TopPortionComponent;
   let fixture: ComponentFixture<TopPortionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TopPortionComponent ]
-    })
-    .compileComponents();
+      declarations: [TopPortionComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +19,16 @@ describe('TopPortionComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
+  });
+
+  // testing api url for top portion
+  it("should pull images from unsplash api", () => {
+    let fixture = TestBed.createComponent(TopPortionComponent);
+    let app = fixture.debugElement.componentInstance;
+    let dataService = fixture.debugElement.injector.get(DataService);
+    fixture.detectChanges();
+    expect(dataService.getPhotosPageOne).toEqual(app.getPhotosPageOne);
   });
 });
